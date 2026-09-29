@@ -1,0 +1,20 @@
+:root{--accent:#e95420;--ink:#1d2433;--soft:#f3f5f9}
+.site-logo{font-weight:700;letter-spacing:.02em}
+.site-logo__mark{color:var(--accent)}
+.hero{background:var(--ink);color:#fff;padding:3rem 0}
+.hero__title{color:#fff;max-width:20ch}
+.hero__lead{color:#d4d9e6;max-width:60ch}
+.game-card{border:1px solid #d9dde6;padding:1.25rem;height:100%;background:#fff}
+.game-card__title{margin-top:0}
+.game-card__tag{display:inline-block;padding:0 .5rem;background:var(--soft);font-size:.8rem}
+.sidebar{background:var(--soft);padding:1.25rem;margin-bottom:1.5rem}
+.sidebar__title{margin-top:0}
+.sidebar__list{list-style:none;margin-left:0}
+.site-footer{background:var(--ink);color:#d4d9e6;padding:2rem 0;margin-top:3rem}
+.site-footer a{color:#fff}
+.table-wrap{overflow-x:auto}
+.quiz__result{font-weight:700}
+@media (min-width:992px){.hero{padding:5rem 0}.hero__title{font-size:3rem}}
+.hero__image{max-width:100%;height:auto;display:block;margin:1.5rem 0}
+.faq__item{border-bottom:1px solid #d9dde6;padding:.75rem 0}
+.faq__item summary{cursor:pointer;font-weight:700}
