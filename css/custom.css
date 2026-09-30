@@ -16,7 +16,7 @@ main p,main li{max-width:none;font-size:1.05rem;line-height:1.65}
 .hero__image{width:100%;max-width:100%;height:auto;display:block;margin:1.5rem 0;border-radius:14px}
 
 /* карточки: своя сетка вместо вложенных колонок Vanilla */
-main .row{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;padding:0;margin:1.25rem 0}
+main .row{display:grid!important;grid-template-columns:repeat(auto-fill,minmax(260px,1fr))!important;gap:1.25rem!important;padding:0!important;margin:1.25rem 0!important}
 main .row>[class*="col-"]{grid-column:auto!important;margin:0;padding:0}
 .game-card{border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:10px;padding:1.4rem;height:100%;background:#fff;box-shadow:0 2px 6px rgba(29,36,51,.06);transition:transform .15s,box-shadow .15s}
 .game-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(29,36,51,.15)}
@@ -45,7 +45,7 @@ tbody tr:nth-child(even){background:var(--soft)}
 .faq__item summary{cursor:pointer;font-weight:700}
 
 .site-footer{background:var(--ink);color:#d4d9e6;padding:2rem 0;margin-top:3rem;border-top:4px solid var(--accent)}
-.site-footer .row{display:grid;grid-template-columns:1fr 1fr}
+.site-footer .row{display:grid!important;grid-template-columns:1fr 1fr!important}
 .site-footer a{color:#fff}
 .quiz__result{font-weight:700;color:var(--accent)}
 
