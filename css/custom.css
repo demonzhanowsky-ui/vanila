@@ -1,36 +1,54 @@
 :root{--accent:#e95420;--accent-2:#5bc0be;--ink:#1d2433;--soft:#f3f5f9;--line:#d9dde6}
-body{background:#fbfbfd}
-h1,h2{color:var(--ink);letter-spacing:-.01em}
+body{background:#fbfbfd;color:#2b3244}
+h1,h2,h3{color:var(--ink);font-weight:700;letter-spacing:-.01em}
+h1{font-size:2.25rem}
+h2{font-size:1.6rem;margin-top:2.5rem;padding-left:.75rem;border-left:5px solid var(--accent)}
 a{color:var(--accent)}
+main p,main li{max-width:none;font-size:1.05rem;line-height:1.65}
 
 .site-logo{font-weight:700;letter-spacing:.02em}
 .site-logo__mark{color:var(--accent)}
 .p-navigation{border-bottom:3px solid var(--accent)}
 
-.hero{background:linear-gradient(135deg,#1d2433 0%,#2e3b5c 60%,#e95420 160%);color:#fff;padding:3rem 2rem;border-radius:12px;margin-top:1.5rem}
-.hero__title{color:#fff;max-width:20ch}
-.hero__lead{color:#dfe4f0;max-width:60ch}
-.hero__image{max-width:100%;height:auto;display:block;margin:1.5rem 0;border-radius:12px}
+.hero{background:linear-gradient(135deg,#1d2433 0%,#2e3b5c 60%,#e95420 160%);color:#fff;padding:3rem 2rem;border-radius:14px;margin-top:1.5rem}
+.hero__title{color:#fff;max-width:18ch;font-size:2.4rem;margin-bottom:1rem}
+.hero__lead{color:#dfe4f0;max-width:60ch;font-size:1.15rem}
+.hero__image{width:100%;max-width:100%;height:auto;display:block;margin:1.5rem 0;border-radius:14px}
 
-.game-card{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:8px;padding:1.25rem;height:100%;background:#fff;transition:transform .15s,box-shadow .15s}
-.game-card:hover{transform:translateY(-3px);box-shadow:0 8px 20px rgba(29,36,51,.12)}
-.game-card__title{margin-top:0}
-.game-card__tag{display:inline-block;padding:.1rem .6rem;border-radius:999px;background:#fde6dc;color:#a13a12;font-size:.8rem;font-weight:600}
+/* карточки: своя сетка вместо вложенных колонок Vanilla */
+main .row{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.25rem;padding:0;margin:1.25rem 0}
+main .row>[class*="col-"]{grid-column:auto!important;margin:0;padding:0}
+.game-card{border:1px solid var(--line);border-top:5px solid var(--accent);border-radius:10px;padding:1.4rem;height:100%;background:#fff;box-shadow:0 2px 6px rgba(29,36,51,.06);transition:transform .15s,box-shadow .15s}
+.game-card:hover{transform:translateY(-4px);box-shadow:0 12px 24px rgba(29,36,51,.15)}
+.game-card__title{margin:0 0 .5rem;font-size:1.3rem}
+.game-card__tag{display:inline-block;padding:.15rem .7rem;border-radius:999px;background:#fde6dc;color:#a13a12;font-size:.8rem;font-weight:700;margin-bottom:.75rem}
+.game-card p{font-size:1rem}
+.game-card a{font-weight:700;text-decoration:none}
+.game-card a::after{content:" →"}
 
-.sidebar{background:#fff;border:1px solid var(--line);border-radius:8px;padding:1.25rem;margin-bottom:1.5rem}
-.sidebar__title{margin-top:0}
+/* список преимуществ */
+.p-list--divided{list-style:none;margin:1rem 0;padding:0}
+.p-list--divided .p-list__item{background:#fff;border:1px solid var(--line);border-left:5px solid var(--accent-2);border-radius:8px;padding:.85rem 1.1rem;margin-bottom:.75rem}
+
+.sidebar{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.25rem;margin-bottom:1.5rem}
+.sidebar__title{margin-top:0;font-size:1.1rem}
 .sidebar__list{list-style:none;margin-left:0}
+.sidebar__list a{text-decoration:none;font-weight:600}
 
-table{border-collapse:collapse}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:#fff}
+table{border-collapse:collapse;margin:0}
+caption{padding:.75rem 1rem;font-weight:700;text-align:left}
 thead th{background:var(--ink);color:#fff}
 tbody tr:nth-child(even){background:var(--soft)}
-.table-wrap{overflow-x:auto}
 
-.faq__item{border:1px solid var(--line);border-radius:8px;background:#fff;padding:.75rem 1rem;margin-bottom:.75rem}
+.faq__item{border:1px solid var(--line);border-radius:10px;background:#fff;padding:.9rem 1.1rem;margin-bottom:.75rem}
 .faq__item summary{cursor:pointer;font-weight:700}
 
 .site-footer{background:var(--ink);color:#d4d9e6;padding:2rem 0;margin-top:3rem;border-top:4px solid var(--accent)}
+.site-footer .row{display:grid;grid-template-columns:1fr 1fr}
 .site-footer a{color:#fff}
 .quiz__result{font-weight:700;color:var(--accent)}
 
-@media (min-width:992px){.hero{padding:5rem 3rem}.hero__title{font-size:3rem}}
+@media (min-width:992px){.hero{padding:5rem 3rem}.hero__title{font-size:3.2rem}}
+.page-banner{width:100%;height:auto;display:block;border-radius:14px;margin:1rem 0 1.5rem}
+.p-notification--information{margin-top:2rem}
